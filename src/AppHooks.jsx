@@ -1,10 +1,10 @@
-import { SimpleForm } from "./useEffect/SimpleForm"
+import { FormCustomHook } from "./useEffect"
 /* import { CounterAppCustom } from "./useState"
  */
 export const AppHooks = () => {
   return (
     <>
-    <SimpleForm/>
+    <FormCustomHook/>
     </>
   )
 }
