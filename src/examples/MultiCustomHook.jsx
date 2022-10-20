@@ -1,5 +1,5 @@
-import { useCounter } from "../hooks/useCounter";
-import { useFetch } from "../hooks/useFetch"
+import {useCounter,useFetch} from '../hooks';
+
 
 export const MultiCustomHook = () => {
 
