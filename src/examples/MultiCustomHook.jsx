@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 import {useCounter,useFetch} from '../hooks';
 
+=======
+import { Quote, LoadingQuote } from "../components";
+import { useCounter, useFetch } from "../hooks";
+>>>>>>> main
 
 export const MultiCustomHook = () => {
 
-  const {counter,increment} = useCounter(1);
+  const { counter, increment } = useCounter(1);
 
-  const { data, isLoading, hasError } = useFetch(`https://www.breakingbadapi.com/api/quotes/${ counter }`);
-  
-  const {author, quote} = !!data && data[0];
+  const { data, isLoading, hasError } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
+
+  const { author, quote } = !!data && data[0];
 
   return (
     <>
@@ -17,22 +22,17 @@ export const MultiCustomHook = () => {
       {
         isLoading
           ? (
-            <div className="alert alert-info text-center">
-              Cargando...
-            </div>
+            <LoadingQuote />
           )
           : (
-            <blockquote className="blockquote text-end">
-              <p className="mb-3">{quote}</p>
-              <footer className="blockquote-footer">{author}</footer>
-            </blockquote>
+            <Quote quote={quote} author={author} />
           )
       }
 
 
       <button className='btn btn-primary'
         disabled={isLoading}
-        onClick={()=>increment()}
+        onClick={() => increment()}
       >
         Next Quote
       </button>
