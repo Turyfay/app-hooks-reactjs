@@ -15,6 +15,8 @@ export const useFetch = (url) => {
 
     const resp = await fetch(url);
     const data = await resp.json();
+
+
     setState({
       data,
       isLoading: false,
@@ -24,9 +26,9 @@ export const useFetch = (url) => {
 
   useEffect(() => {
     getfetch();
-  }, []);
+  }, [url]);
 
   return {
-    ...state,
+    ...state
   };
 };
