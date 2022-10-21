@@ -1,11 +1,13 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 
 export const Quote = ({quote, author}) => {
 
     const pRef = useRef();
+    const [boxSize, setBoxSize] = useState({height:0,width:0})
 
     useLayoutEffect(() => {
-        console.log(pRef.current.getBoundingClientRect());
+        const {height, width} = pRef.current.getBoundingClientRect();
+        setBoxSize({width, height});
         
     }, [quote])
 
