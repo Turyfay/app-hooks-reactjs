@@ -1,10 +1,10 @@
 
-import { Layout } from "./useLayoutEffect/Layout"
+import { Memorize } from "./memos/Memorize"
 
 export const AppHooks = () => {
   return (
     <>
-    <Layout/>
+    <Memorize/>
     </>
   )
 }
