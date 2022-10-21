@@ -1,12 +1,10 @@
-import { MultiCustomHook } from "./examples/MultiCustomHook"
-import { FormCustomHook } from "./useEffect"
-import { FocusScreen } from "./useRef/FocusScreen"
-/* import { CounterAppCustom } from "./useState"
- */
+
+import { Layout } from "./useLayoutEffect/Layout"
+
 export const AppHooks = () => {
   return (
     <>
-    <FocusScreen/>
+    <Layout/>
     </>
   )
 }
