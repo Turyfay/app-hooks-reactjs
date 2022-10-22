@@ -1,10 +1,9 @@
 
-import { Memorize } from "./memos/Memorize"
-
+import { MemoHook } from "./memos/MemoHook"
 export const AppHooks = () => {
   return (
     <>
-    <Memorize/>
+    <MemoHook/>
     </>
   )
 }
