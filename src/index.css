@@ -1,7 +1,10 @@
 body{
-    padding: 20px;
+    padding: 5px;
 }
 
 button{
     margin-right: 5px;
+}
+a {
+    margin-left: 10px;
 }
